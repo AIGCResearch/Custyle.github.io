@@ -289,7 +289,7 @@
 </section>
  -->
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       
@@ -314,8 +314,44 @@
       
     </div>
   </div>
+</section> -->
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <!-- 图片轮播 -->
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-chair">
+          <img src="./static/images/more_result_chair.png" alt="Chair Image" class="more-result">
+        </div>
+        <div class="item item-hotdog">
+          <img src="./static/images/more_result_hotdog.png" alt="Hotdog Image" class="more-result">
+        </div>
+        <div class="item item-mic">
+          <img src="./static/images/more_result_mic.png" alt="Mic Image" class="more-result">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #results-carousel {
+      display: flex; /* 图片水平排列 */
+      justify-content: center; /* 水平居中对齐 */
+      align-items: center; /* 垂直居中对齐 */
+      gap: 20px; /* 图片之间的间距 */
+    }
+
+    .more-result {
+      width: auto; /* 宽度自动，保持比例 */
+      max-height: 100px; /* 限制图片最大高度 */
+    }
+  </style>
 </section>
-          
+
+
+
+  
 
   
 
