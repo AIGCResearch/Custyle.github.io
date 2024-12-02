@@ -254,31 +254,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Recent research in 2D image stylization has shifted from traditional approaches based on universally pre-trained VGG networks or adversarial learning paradigms to diffusion models, which facilitate progressive and fine-grained style infusion. Nevertheless, the advancement has been merely explored for 3D stylization. In this paper, we introduce a comprehensive Gaussian Splatting (GS) stylization framework that facilitates style transfer from a customized reference image to a random 3D model. In general, we distill style scores of a pre-trained specialized diffusion model into GS optimization through an adaptive dynamic schedule. Specifically, we begin by embedding the style of a customized reference into the front view using the image stylization diffusion model. To ensure geometric consistency, the stylization adjustments of the front view are propagated to fixed perspectives using a multiview diffusion model guided by the reference image. Furthermore, we introduce a straightforward yet effective score distillation strategy, termed style outpainting, to progressively supplement the remaining views without ground truth supervisions. Additionally, we find that eliminating outlier Gaussians with excessively high gradients can effectively reduce the risk of stylization failure. We conduct extensive experiments on a collection of style references (ie. artistic paintings and customized designs) and 3D models to validate our framework. Comprehensive visualizations and quantitative analyses demonstrate our superiority in achieving high-fidelity, geometry-consistent GS stylization compared to previous methods.
           </p>
         </div>
       </div>
