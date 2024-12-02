@@ -316,6 +316,39 @@
 </section>
 
 
+
+
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Method. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method</h2>
+        <figure class="image is-centered">
+          <img src="./static/images/pipeline_overview.png" alt="Method Pipeline Illustration">
+        </figure>
+        <div class="content has-text-justified">
+          <p>
+            Overview of our pipeline for 3D stylization with three modules. 
+            (a) In the \textbf{Multi-view Style Enhancement} module, style information is extracted from reference images, with Style Cleaning refining the style representation and Style Injection integrating it across multiple views to ensure geometric consistency. 
+            (b) The \textbf{Dynamic Style Score Distillation (DSSD)} module employs dynamic noise scheduling and adaptive style guidance, integrating both latent and pixel losses to achieve consistent stylization step by step. 
+            (c) In the \textbf{Progressive Style Outpainting (PSO)} module, progressive outpainting achieves multi-view style propagation. 
+            While Gaussian Refinement (\eg scale regularization and high-gradient Gaussian culling) is simultaneously conducted during the distillation process, it enhances the final stylized 3D representation, particularly in art scenes.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Method. -->
+  </div>
+</section>
+
+
+
+
+  
+
 <section class="section">
   <div class="container is-max-desktop">
 
