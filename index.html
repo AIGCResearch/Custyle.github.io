@@ -317,7 +317,7 @@
 
     .more-result {
       width: auto; /* 宽度自动，保持比例 */
-      max-height: 100px; /* 限制图片最大高度 */
+      max-height: 300px; /* 限制图片最大高度 */
     }
   </style>
 </section>
@@ -496,13 +496,28 @@
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Ablation Study</h2>
         <div class="columns is-vcentered">
+          
           <!-- 消融实验 1 -->
           <div class="column is-4 has-text-centered">
             <h2 class="title is-4 has-text-centered">Ablation on DSSD</h2>
             <img src="./static/images/ablation_dssd.png" alt="DSSD Ablation Study" height="100%" class="ablation-image">
             <p>Ablation on DSSD (Dynamic Style Score Distillation)</p>
           </div>
-
+          
+          <!-- 消融实验 2 -->
+          <div class="column is-4 has-text-centered">
+            <h2 class="title is-4 has-text-centered">Ablation on PSO</h2>
+            <img src="./static/images/ablation_outpainting.png" alt="Outpainting Ablation Study" height="100%" class="ablation-image">
+            <p>Ablation on Progressive Style Outpainting</p>
+          </div>
+          
+          <!-- 消融实验 3 -->
+          <div class="column is-4 has-text-centered">
+            <h2 class="title is-4 has-text-centered">Ablation on Gaussian Refinement</h2>
+            <img src="./static/images/ablation_gaussian_refine.png" alt="Gaussian Refinement Ablation Study" height="100%" class="ablation-image">
+            <p>Ablation on Gaussian Refinement</p>
+          </div>
+          
         </div>
       </div>
       
