@@ -54,6 +54,9 @@ body {
   .footer .icon-link {
     color: #b1b1b1;
   }
+  .footer  {
+    background-color: #2b2b2b;
+  }
 }
 
 body {
