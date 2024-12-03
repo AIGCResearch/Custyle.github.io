@@ -6,7 +6,7 @@
 
 [data-theme="dark"] {
   --background-color: #1a1a1a;
-  --text-color: #ffffff;
+  --text-color: #b1b1b1;
 }
 
 body {
@@ -41,6 +41,18 @@ body {
   
   a:hover {
     color: #2366d1;
+  }
+  .title{
+    color: #b1b1b1;
+  }
+  strong{
+    color: #fff;
+  }
+  .subtitle{
+    color: #b1b1b1;
+  }
+  .footer .icon-link {
+    color: #b1b1b1;
   }
 }
 
