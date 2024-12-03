@@ -307,7 +307,7 @@
     </div>
   </div>
 
-<!--   <style>
+  <style>
     #results-carousel {
       display: flex; /* 图片水平排列 */
       justify-content: center; /* 水平居中对齐 */
@@ -319,7 +319,7 @@
       width: auto; /* 宽度自动，保持比例 */
       max-height: 100px; /* 限制图片最大高度 */
     }
-  </style> -->
+  </style>
 </section>
 
 
@@ -491,6 +491,7 @@
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
+      
       <!-- 消融实验 -->
       <div class="column is-full-width">
         <h2 class="title is-3 has-text-centered">Ablation Study</h2>
@@ -501,20 +502,10 @@
             <img src="./static/images/ablation_dssd.png" alt="DSSD Ablation Study" height="100%" class="ablation-image">
             <p>Ablation on DSSD (Dynamic Style Score Distillation)</p>
           </div>
-          <!-- 消融实验 2 -->
-          <div class="column is-4 has-text-centered">
-            <h2 class="title is-4 has-text-centered">Ablation on PSO</h2>
-            <img src="./static/images/ablation_outpainting.png" alt="Outpainting Ablation Study" height="100%" class="ablation-image">
-            <p>Ablation on Progressive Style Outpainting</p>
-          </div>
-          <!-- 消融实验 3 -->
-          <div class="column is-4 has-text-centered">
-            <h2 class="title is-4 has-text-centered">Ablation on Gaussian Refinement</h2>
-            <img src="./static/images/ablation_gaussian_refine.png" alt="Gaussian Refinement Ablation Study" height="100%" class="ablation-image">
-            <p>Ablation on Gaussian Refinement</p>
-          </div>
+
         </div>
       </div>
+      
     </div>
   </div>
 
@@ -576,13 +567,17 @@
     </div>
     <!--/ Matting. -->
 
+
+
+
+    
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Animation</h2>
 
         <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
+<!--         <h3 class="title is-4">Interpolating states</h3>
         <div class="content has-text-justified">
           <p>
             We can also animate the scene by interpolating the deformation latent codes of two input
@@ -592,9 +587,9 @@
         </div>
         <div class="columns is-vcentered interpolation-panel">
           <div class="column is-3 has-text-centered">
-<!--             <img src="./static/images/interpolate_start.jpg"
+            <img src="./static/images/interpolate_start.jpg"
                  class="interpolation-image"
-                 alt="Interpolate start reference image."/> -->
+                 alt="Interpolate start reference image."/>
             <p>Start Frame</p>
           </div>
           <div class="column interpolation-video-column">
@@ -606,17 +601,17 @@
                    step="1" min="0" max="100" value="0" type="range">
           </div>
           <div class="column is-3 has-text-centered">
-<!--             <img src="./static/images/interpolate_end.jpg"
+            <img src="./static/images/interpolate_end.jpg"
                  class="interpolation-image"
-                 alt="Interpolation end reference image."/> -->
+                 alt="Interpolation end reference image."/>
             <p class="is-bold">End Frame</p>
           </div>
         </div>
-        <br/>
+        <br/> -->
         <!--/ Interpolating. -->
 
         <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
+<!--         <h3 class="title is-4">Re-rendering the input video</h3>
         <div class="content has-text-justified">
           <p>
             Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
@@ -624,7 +619,7 @@
           </p>
         </div>
         <div class="content has-text-centered">
-<!--           <video id="replay-video"
+          <video id="replay-video"
                  controls
                  muted
                  preload
@@ -632,8 +627,8 @@
                  width="75%">
             <source src="./static/videos/replay.mp4"
                     type="video/mp4">
-          </video> -->
-        </div>
+          </video>
+        </div> -->
         <!--/ Re-rendering. -->
 
       </div>
@@ -642,7 +637,7 @@
 
 
     <!-- Concurrent Work. -->
-    <div class="columns is-centered">
+<!--     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Related Links</h2>
 
@@ -665,7 +660,7 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
     <!--/ Concurrent Work. -->
 
   </div>
