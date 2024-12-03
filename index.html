@@ -366,9 +366,9 @@
             In general, we distill style scores of a pre-trained specialized diffusion model into GS optimization through an adaptive dynamic schedule. 
             Specifically, we begin by embedding the style of a customized reference into the front view using the image stylization diffusion model. 
             To ensure geometric consistency, the stylization adjustments of the front view are propagated to fixed perspectives using a multiview diffusion model guided by the reference image. 
-            Furthermore, we introduce a straightforward yet effective score distillation strategy, termed \emph{style outpainting}, to progressively supplement the remaining views without ground truth supervisions. 
+            Furthermore, we introduce a straightforward yet effective score distillation strategy, termed <i>style outpainting</i>, to progressively supplement the remaining views without ground truth supervisions. 
             Additionally, we find that eliminating outlier Gaussians with excessively high gradients can effectively reduce the risk of stylization failure. 
-            We conduct extensive experiments on a collection of style references (\ie artistic paintings and customized designs) and 3D models to validate our framework. 
+            We conduct extensive experiments on a collection of style references (i.e. artistic paintings and customized designs) and 3D models to validate our framework. 
             Comprehensive visualizations and quantitative analyses demonstrate our superiority in achieving high-fidelity, geometry-consistent GS stylization compared to previous methods.
           </p>
         </div>
@@ -393,9 +393,6 @@
 
 
 
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Method. -->
@@ -407,11 +404,16 @@
         </figure>
         <div class="content has-text-justified">
           <p>
-            Overview of our pipeline for 3D stylization with three modules. 
-            (a) In the \textbf{Multi-view Style Enhancement} module, style information is extracted from reference images, with Style Cleaning refining the style representation and Style Injection integrating it across multiple views to ensure geometric consistency. 
-            (b) The \textbf{Dynamic Style Score Distillation (DSSD)} module employs dynamic noise scheduling and adaptive style guidance, integrating both latent and pixel losses to achieve consistent stylization step by step. 
-            (c) In the \textbf{Progressive Style Outpainting (PSO)} module, progressive outpainting achieves multi-view style propagation. 
-            While Gaussian Refinement (\eg scale regularization and high-gradient Gaussian culling) is simultaneously conducted during the distillation process, it enhances the final stylized 3D representation, particularly in art scenes.
+            Overview of our pipeline for 3D stylization with three modules:
+          </p>
+          <p>
+            <strong>(a) Multi-view Style Enhancement:</strong> Style information is extracted from reference images, with Style Cleaning refining the style representation and Style Injection integrating it across multiple views to ensure geometric consistency.
+          </p>
+          <p>
+            <strong>(b) Dynamic Style Score Distillation (DSSD):</strong> This module employs dynamic noise scheduling and adaptive style guidance, integrating both latent and pixel losses to achieve consistent stylization step by step.
+          </p>
+          <p>
+            <strong>(c) Progressive Style Outpainting (PSO):</strong> Progressive outpainting achieves multi-view style propagation. While Gaussian Refinement (e.g., scale regularization and high-gradient Gaussian culling) is simultaneously conducted during the distillation process, it enhances the final stylized 3D representation, particularly in art scenes.
           </p>
         </div>
       </div>
@@ -427,12 +429,17 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Multi-view Stylization</h2>
         <figure class="image is-centered">
-          <img src="./static/images/pipeline_mv_style.png" alt="Method Pipeline Illustration">
+          <img src="./static/images/pipeline_mv_style.png" alt="Multi-view Style Pipeline Illustration">
         </figure>
         <div class="content has-text-justified">
           <p>
-            Multi-view Style Enhancement.
-            (a) \textbf{Style Cleaning} isolates pure style information by removing content elements and enhancing style features, and (b) \textbf{Style Injection} integrates this refined style across multiple views, ensuring consistent and geometry-preserving 3D style enhancement.
+            <strong>Multi-view Style Enhancement:</strong>
+          </p>
+          <p>
+            (a) <strong>Style Cleaning:</strong> Isolates pure style information by removing content elements and enhancing style features.
+          </p>
+          <p>
+            (b) <strong>Style Injection:</strong> Integrates this refined style across multiple views, ensuring consistent and geometry-preserving 3D style enhancement.
           </p>
         </div>
       </div>
@@ -440,22 +447,41 @@
     <!--/ Method. -->
   </div>
 </section>
-  
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Experiment. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Visual Result</h2>
+        <h2 class="title is-3">Visual Results</h2>
         <figure class="image is-centered">
-          <img src="./static/images/visual_result.png" alt="Experiment Illustration">
+          <img src="./static/images/visual_result.png" alt="Visual Result Illustration">
         </figure>
         <div class="content has-text-justified">
           <p>
-            Visual Result. Demonstration of our method's performance across six distinct styles—sky painting, cartoon, drawing, fire, cloud, and Black Myth (Wukong)—applied to three 3D objects: chair, hotdog, and mic. 
-            The results illustrate our model's capability to handle two main categories of styles: (1) Non-photorealistic Art Styles (\eg cartoon, drawing), showcasing traditional artistic expressions, and (2) State-based Styles (\eg fire, cloud), which capture physical properties. 
-            This figure demonstrates our method's versatility in stylizing 3D models while preserving style fidelity and geometric consistency across diverse artistic and physical characteristics. 
-            The original texture on the chair, lighting on the hotdog, and metallic sheen on the mic are all effectively preserved.
+            <strong>Visual Results:</strong> This figure demonstrates the performance of our method across six distinct styles: <em>Sky Painting</em>, <em>Cartoon</em>, <em>Drawing</em>, <em>Fire</em>, <em>Cloud</em>, and <em>Black Myth (Wukong)</em>, applied to three 3D objects: <em>Chair</em>, <em>Hotdog</em>, and <em>Mic</em>.
+          </p>
+          <p>
+            These results highlight the model's capability to handle two main categories of styles: 
+          </p>
+          <ul>
+            <li>
+              <strong>Non-photorealistic Art Styles</strong> (e.g., <em>Cartoon</em>, <em>Drawing</em>): These styles showcase traditional artistic expressions.
+            </li>
+            <li>
+              <strong>State-based Styles</strong> (e.g., <em>Fire</em>, <em>Cloud</em>): These styles capture physical properties.
+            </li>
+          </ul>
+          <p>
+            Our method demonstrates versatility in stylizing 3D models while preserving both style fidelity and geometric consistency. For example:
+          </p>
+          <ul>
+            <li>The original texture on the <em>Chair</em>.</li>
+            <li>The lighting effects on the <em>Hotdog</em>.</li>
+            <li>The metallic sheen on the <em>Mic</em>.</li>
+          </ul>
+          <p>
+            These features are effectively preserved, ensuring high-quality results across diverse artistic and physical characteristics.
           </p>
         </div>
       </div>
@@ -463,7 +489,8 @@
     <!--/ Experiment. -->
   </div>
 </section>
-  
+
+
 <section class="section">
   <div class="container is-max-desktop">
     <!-- Experiment. -->
@@ -471,14 +498,22 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Qualitative Comparisons</h2>
         <figure class="image is-centered">
-          <img src="./static/images/comparison.png" alt="Experiment Illustration">
+          <img src="./static/images/comparison.png" alt="Qualitative Comparison Illustration">
         </figure>
         <div class="content has-text-justified">
           <p>
-            Qualitative Comparisons. We compare our method against other SOTA (StyleGaussian \cite{liu2024stylegaussian}, IGS2GS \cite{igs2gs}, and Ref-NPR \cite{zhang2023ref}) on three datasets (chair, hotdog, and mic) using cartoon, sky painting, and fire styles. 
-            The horizontal axis represents the compared methods, and the vertical axis displays different datasets. 
-            Our method effectively retains original model details, such as the chair’s texture, the hotdog’s lighting, and the microphone’s metallic sheen. 
-            Compared to others, our method exhibits stronger semantic understanding, clearly distinguishing elements like the sausage, bun, and plate on the hotdog, resulting in more stable and visually coherent stylization.
+            <strong>Qualitative Comparisons:</strong> We compare our method against other state-of-the-art (SOTA) approaches: <em>StyleGaussian</em> (<a href="#liu2024stylegaussian">Liu et al., 2024</a>), <em>IGS2GS</em> (<a href="#igs2gs">IGS2GS Reference</a>), and <em>Ref-NPR</em> (<a href="#zhang2023ref">Zhang et al., 2023</a>) on three datasets (<em>Chair</em>, <em>Hotdog</em>, and <em>Mic</em>) using three styles: <em>Cartoon</em>, <em>Sky Painting</em>, and <em>Fire</em>.
+          </p>
+          <p>
+            The horizontal axis represents the compared methods, while the vertical axis displays different datasets. Our method effectively preserves the original model details, including:
+          </p>
+          <ul>
+            <li>The texture of the <em>Chair</em>.</li>
+            <li>The lighting effects on the <em>Hotdog</em>.</li>
+            <li>The metallic sheen of the <em>Mic</em>.</li>
+          </ul>
+          <p>
+            Compared to other methods, our approach demonstrates stronger semantic understanding, clearly distinguishing key elements such as the sausage, bun, and plate on the <em>Hotdog</em>. This results in more stable and visually coherent stylizations.
           </p>
         </div>
       </div>
