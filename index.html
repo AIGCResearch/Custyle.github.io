@@ -295,13 +295,13 @@
       <!-- 图片轮播 -->
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-chair">
-          <img src="./static/images/more_result_chair.png" alt="Chair Image" height="100%" class="more-result">
+          <img src="./static/images/more_result_chair.png" alt="Chair Image" class="more-result">
         </div>
         <div class="item item-hotdog">
-          <img src="./static/images/more_result_hotdog.png" alt="Hotdog Image" height="100%" class="more-result">
+          <img src="./static/images/more_result_hotdog.png" alt="Hotdog Image" class="more-result">
         </div>
         <div class="item item-mic">
-          <img src="./static/images/more_result_mic.png" alt="Mic Image" height="100%" class="more-result">
+          <img src="./static/images/more_result_mic.png" alt="Mic Image" class="more-result">
         </div>
       </div>
     </div>
@@ -318,9 +318,15 @@
     .more-result {
       width: auto; /* 宽度自动，保持比例 */
       max-height: 300px; /* 限制图片最大高度 */
+      display: block; /* 确保图片显示为块级元素 */
+    }
+
+    .hero-body {
+      padding: 20px; /* 增加内边距，避免内容被挤压 */
     }
   </style>
 </section>
+
 
 
 
