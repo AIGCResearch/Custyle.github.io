@@ -76,3 +76,57 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+// 在已有的 JS 后添加
+document.addEventListener('DOMContentLoaded', () => {
+  const themeToggle = document.getElementById('theme-toggle');
+  
+  // 检查系统主题
+  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+  
+  // 设置初始主题
+  function setInitialTheme() {
+    if (localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+      updateIcon(localStorage.getItem('theme'));
+    } else if (prefersDark.matches) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      updateIcon('dark');
+    }
+  }
+  
+  // 更新图标
+  function updateIcon(theme) {
+    const themeIcon = document.getElementById('theme_icon');
+    if (theme === 'light') {
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    } else {
+      themeIcon.classList.remove('fa-sun');
+      themeIcon.classList.add('fa-moon');
+    }
+  }
+  
+  // 切换主题
+  themeToggle.addEventListener('click', () => {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    // if (newTheme === 'dark') {
+    //   document.getElementById('theme_icon').className = 'fa fa-moon-o';
+    // }else{
+    //   document.getElementById('theme_icon').className = 'fa fa-sun-o';
+    // }
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    updateIcon(newTheme);
+  });
+  
+  // 监听系统主题变化
+  prefersDark.addListener((e) => {
+    if (!localStorage.getItem('theme')) {
+      document.documentElement.setAttribute('data-theme', e.matches ? 'dark' : 'light');
+      // updateIcon(e.matches ? 'dark' : 'light');
+    }
+  });
+  
+  setInitialTheme();
+});

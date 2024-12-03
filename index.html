@@ -9,32 +9,33 @@
   <title>Custyle: Gaussian Splatting Stylization with Customized Reference via Dynamic Style Score Distillation</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script> -->
+  
   <script>
     window.dataLayer = window.dataLayer || [];
-
+    
     function gtag() {
       dataLayer.push(arguments);
     }
-
+    
     gtag('js', new Date());
-
+    
     gtag('config', 'G-PYVRSFMDRL');
-  </script>
+    </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+rel="stylesheet">
 
-  <link rel="stylesheet" href="./static/css/bulma.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
-  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
-  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
-  <link rel="stylesheet" href="./static/css/index.css">
-  <link rel="icon" href="./static/images/AIGC_Research_light.jpg">
+<link rel="stylesheet" href="./static/css/bulma.min.css">
+<link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+<link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+<link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+<link rel="stylesheet" href="./static/css/index.css">
+<link rel="icon" href="./static/images/AIGC_Research_light.jpg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="./static/js/fontawesome.all.min.js"></script>
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
@@ -52,13 +53,13 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://github.com/AIGCResearch">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
       </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
         <a class="navbar-link">
           More Research
         </a>
@@ -76,10 +77,20 @@
             Zero123++
           </a>
         </div>
-      </div>
+      </div> -->
     </div>
 
   </div>
+  <div class="navbar-end">
+    <div class="navbar-item">
+      <button id="theme-toggle" class="button">
+        <span class="icon">
+          <i class="fas fa-moon" id="theme_icon"></i>
+        </span>
+      </button>
+    </div>
+  </div>
+  
 </nav>
 
 
@@ -529,25 +540,23 @@
       <div class="column is-four-fifths">
         <h2 class="title is-3">Quantitative Metric</h2>
         <!-- 图片布局 -->
-        <div class="columns is-multiline is-centered">
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/metric_average.png" alt="Metric Average">
-              <figcaption>Average Metric</figcaption>
-            </figure>
-          </div>
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/metric_detail.png" alt="Metric Detail">
-              <figcaption>Detail Metric</figcaption>
-            </figure>
-          </div>
-          <div class="column is-one-third">
-            <figure class="image">
-              <img src="./static/images/metric_clip.png" alt="Metric Clip">
-              <figcaption>CLIP Metric</figcaption>
-            </figure>
-          </div>
+        <div class="column">
+          <figure class="image">
+            <img src="./static/images/metric_average.png" alt="Metric Average">
+            <figcaption>Average Metric</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="./static/images/metric_detail.png" alt="Metric Detail">
+            <figcaption>Detail Metric</figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="./static/images/metric_clip.png" alt="Metric Clip">
+            <figcaption>CLIP Metric</figcaption>
+          </figure>
         </div>
         <!-- 描述内容 -->
         <div class="content has-text-justified">
@@ -640,7 +649,7 @@
     <!-- Animation. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
+        <!-- <h2 class="title is-3">Animation</h2> -->
 
         <!-- Interpolating. -->
 <!--         <h3 class="title is-4">Interpolating states</h3>
@@ -738,7 +747,7 @@
 
 
 
-<section class="section" id="BibTeX">
+<!-- <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
     <pre><code>@article{park2021nerfies,
@@ -748,7 +757,7 @@
   year      = {2021},
 }</code></pre>
   </div>
-</section>
+</section> -->
 
 
 <footer class="footer">
@@ -758,7 +767,7 @@
          href="./static/videos/nerfies_paper.pdf">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="https://github.com/AIGCResearch" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
