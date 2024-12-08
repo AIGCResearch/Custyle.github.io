@@ -85,13 +85,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // 设置初始主题
   function setInitialTheme() {
-    if (localStorage.getItem('theme')) {
-      document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
-      updateIcon(localStorage.getItem('theme'));
-    } else if (prefersDark.matches) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-      updateIcon('dark');
-    }
+    // if (localStorage.getItem('theme')) {
+    //   document.documentElement.setAttribute('data-theme', localStorage.getItem('theme'));
+    //   updateIcon(localStorage.getItem('theme'));
+    // } else if (prefersDark.matches) {
+    // }
+    document.documentElement.setAttribute('data-theme', 'dark');
+    updateIcon('dark');
   }
   
   // 更新图标
